@@ -10,9 +10,9 @@ Point operator-(const Point& a1, const Point& a2) {
 }
 
 double getAngle(Point G) {
-  // double I = G.px / sqrt(G.px * G.px + G.py * G.py);
-  // double angle = acos(I) * 180 / M_PI;
-  double angle = atan2(G.py, G.px) * 180.0 / M_PI;  // できない
+  double I = G.px / sqrt(G.px * G.px + G.py * G.py);
+  double angle = acos(I) * 180 / M_PI;
+  // double angle = atan2(G.py, G.px) * 180.0 / M_PI;  // できない
   if (G.py >= 0.0) {
     return angle;
   } else {
